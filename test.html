@@ -1,7 +1,7 @@
 <!-- import aframe and then ar.js with image tracking / location based features -->
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-
+<html>
 <!-- style for the loader -->
 <style>
   .arjs-loader {
@@ -25,6 +25,11 @@
 </style>
 
 <body style="margin : 0px; overflow: hidden;">
+  <!-- Camera Switch Test
+  var secondCameraEl = document.querySelector('#second-camera');
+  secondCameraEl.setAttribute('camera', 'active', true);
+  -->
+
   <!-- 
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
@@ -32,10 +37,10 @@
    -->
   <a-scene>
     <a-assets>
-      <a-asset-item id="cube" src="https://cruncho18.github.io/projecttest/bin/untitled.gltf"></a-asset-item>
+    <a-asset-item id="cube" src="https://cruncho18.github.io/projecttest/bin/untitled.gltf"></a-asset-item>
     </a-assets>
-  <a-entity gltf-model="cube"></a-entity>
-</a-scene>
+    <a-entity gltf-model="cube" scale="100 100 100"></a-entity>
+
   <!--
   <a-scene>
     vr-mode-ui="enabled: false;"
@@ -53,13 +58,14 @@
     >
       <a-entity
         gltf-model="https://cruncho18.github.io/projecttest/bin/untitled.gltf"
-        scale="5 5 5"
-        position="50 150 0"
+
       >
       </a-entity>
     </a-nft>
     -->
     <!-- static camera that moves according to the device movemenents -->
-    <a-entity camera></a-entity>
+    <a-entity camera>
+    </a-entity>
   </a-scene>
 </body>
+</html>
