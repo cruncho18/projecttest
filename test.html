@@ -29,19 +29,21 @@
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
-
-  <!-- a-frame scene -->
   <a-scene>
+    <a-assets>
+      <a-asset-item id="cube" src="https://cruncho18.github.io/projecttest/bin/untitled.gltf"></a-asset-item>
+    </a-assets>
+  <a-entity gltf-model="cube"></a-entity>
+</a-scene>
   <!--
+  <a-scene>
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  > -->
     <a-gltf-model src="https://cruncho18.github.io/projecttest/bin/untitled.gltf"></a-gltf-model>
-    <!--
     <a-nft
-      type="nft"
+      type="nft"  
       url="https://cruncho18.github.io/projecttest/img/png-transparent-smiley"
       smooth="true"
       smoothCount="10"
