@@ -31,8 +31,7 @@
     <div>Loading, please wait...</div>
   </div>
   <script>
-    var secondCameraEl = document.querySelector('#second-camera');
-    secondCameraEl.setAttribute('camera', 'active', true);
+  const videoConstraints = { facingMode: 'user' };
   </script>
   <a-scene>
     vr-mode-ui="enabled: false;"
@@ -41,14 +40,14 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
     <a-nft
       type="nft"  
-      url="projecttest/img/trex"
+      url="https://cruncho18.github.io/projecttest/img/trex"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
     >
       <a-entity
-        gltf-model="projecttest/bin/trex.gltf"
+        gltf-model="https://cruncho18.github.io/projecttest/bin/trex.gltf"
         scale="35 35 35"
         position="0 0 -100"
       >
