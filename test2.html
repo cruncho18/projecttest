@@ -1,6 +1,8 @@
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1.3.0/dist/aframe-master.min.js"></script>
+<!-- import aframe and then ar.js with image tracking / location based features -->
+<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-
+<html>
+<!-- style for the loader -->
 <style>
   .arjs-loader {
     height: 100%;
@@ -23,32 +25,37 @@
 </style>
 
 <body style="margin : 0px; overflow: hidden;">
-  <!-- minimal loader shown until image descriptors are loaded -->
+  <!-- Camera Switch Test
+  var secondCameraEl = document.querySelector('#second-camera');
+  secondCameraEl.setAttribute('camera', 'active', true);
+  -->
+
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
-  <a-scene
+  <a-scene>
     vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true; precision: medium;"
+    renderer="logarithmicDepthBuffer: true;"
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
-    <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
     <a-nft
-      type="nft"
-      url="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+      type="nft"  
+      url="./img/png-transparent-smiley"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
       smoothThreshold="5"
-    > <!-- comment -->
-      <a-entity 
-        gltf-model="https://cruncho18.github.io/projecttest/bin/untitled.gltf"
-        scale="25 25 25"
-        position="0 0 -200"
+    >
+      <a-entity
+        gltf-model="./bin/untitled.gltf"
+        scale="5 5 5"
+        position="0 0 -100"
       >
       </a-entity>
     </a-nft>
-    <a-entity camera look-controls></a-entity>
+    <!-- static camera that moves according to the device movemenents -->
+    <a-entity camera>
+    </a-entity>
   </a-scene>
 </body>
+</html>
