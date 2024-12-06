@@ -15,7 +15,12 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Grid"
+			"name":"Grid",
+			"scale":[
+				5,
+				5,
+				5
+			]
 		}
 	],
 	"meshes":[
