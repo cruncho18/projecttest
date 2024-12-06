@@ -30,6 +30,10 @@
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
+  <script>
+    var secondCameraEl = document.querySelector('#second-camera');
+    secondCameraEl.setAttribute('camera', 'active', true);
+  </script>
   <a-scene>
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
